@@ -1,0 +1,38 @@
+﻿@model RegisterationRequestDto
+<form method="post">
+    <div class="container border pb-4">
+        <div class="row text-center">
+            Register
+        </div>
+        <div class="row text-center">
+            
+            <div class="row">
+                <div class="col-6 offset-3 pb-2">
+                    <input asp-for="Name" class="form-control" placeholder="name" />
+                    <span asp-validation-for="Name" class="text-danger" />
+                </div>
+                <div class="col-6 offset-3 pb-2">
+                    <input asp-for="Email" class="form-control" placeholder="email" />
+                    <span asp-validation-for="Email" class="text-danger" />
+                </div>
+                <div class="col-6 offset-3 pb-2">
+                    <input asp-for="PhoneNumber" class="form-control" placeholder="phonenumber" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger" />
+                </div>
+                <div class="col-6 offset-3 pb-2">
+                    <input asp-for="Password" class="form-control" placeholder="password" />
+                    <span asp-validation-for="Password" class="text-danger" />
+                </div>
+                <div class="col-6 offset-3 pb-2">
+                    <select asp-for="Role" class="form-select" asp-items="@ViewBag.RoleList">
+                        <option disabled selected >--select role--</option>
+                    </select>
+                    <span asp-validation-for="Role" class="text-danger" />
+                </div>
+                <div class="col-6 offset-3 pb-2">
+                    <button type="submit" class="form-submit btn btn-success" value="Submit">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

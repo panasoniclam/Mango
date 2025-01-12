@@ -7,6 +7,9 @@ namespace Mango.Web.Utility
 		public enum ApiType{
 		GET, PUT, POST, DELETE
 			 }
-	}
+		public static string AuthAPIBase { get; set; }
+		public const string RoleAmin = "ADMIN";
+        public const string RoleCustomer = "CUSTOMER";
+    }
 }
 

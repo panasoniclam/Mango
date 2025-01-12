@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Mango.Services.AuthAPI.Models;
 namespace Mango.Services.AuthAPI.Data
 {
-	public class AppDbContext:IdentityDbContext<IdentityUser>
+	public class AppDbContext:IdentityDbContext<ApplicationUser>
 	{
 		public AppDbContext(DbContextOptions<AppDbContext> options) :base(options)
 		{
