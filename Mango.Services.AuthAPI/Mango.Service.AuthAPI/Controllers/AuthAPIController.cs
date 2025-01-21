@@ -64,6 +64,8 @@ namespace Mango.Services.AuthAPI.Controllers
                 return BadRequest(_response);
             }
             _response.Result = assignRoleSuccess;
+
+            
             return Ok(_response);
         }
     }
